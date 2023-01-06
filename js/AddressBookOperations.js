@@ -47,3 +47,20 @@ window.addEventListener('DOMContentLoaded',(event)=>{
         }
     });
 });
+let addresBookDetails=new AddresBookDetails();
+
+function savingTheDetails(){
+    try{
+        addresBookDetails._id=0;
+        addresBookDetails._name=document.getElementById('name').value;
+        addresBookDetails._phone=document.getElementById('phone').value;
+        addresBookDetails._address=document.getElementById('address').value;
+        addresBookDetails._city=document.getElementById('city').value;
+        addresBookDetails._state=document.getElementById('state').value;
+        addresBookDetails._zip=document.getElementById('zip').value;
+        console.log(contact);
+    }catch (exception) {
+        console.error(exception);
+    }
+    updateToLocalStorage();
+}
