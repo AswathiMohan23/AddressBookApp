@@ -11,7 +11,7 @@ body{
     flex-direction: row;
     align-items:center;
     border:0px solid green;
-    width:80%;
+    width:20%;
 }
 .logo-content-img{
     border: solid 0px #42515f;
@@ -27,6 +27,13 @@ body{
 }
 .address-book{
     color:#42515F;
+}
+.address-content{
+      
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #BDBDBD;
+    border-radius: 3px;
+    opacity: 1;
 }
 *{box-sizing: border-box;}
 .row-content{
@@ -72,7 +79,9 @@ label{
     opacity: 1;
 }
 .text{
-    
+    top: 336px;
+    left: 554px;    
+    height: 24px;
     text-align: left;
     font: normal normal normal 18px/24px Roboto;
     font-size: 15px;
@@ -80,6 +89,8 @@ label{
     opacity: 1;
 }
 .form-content{
+    top: 370px;
+    left: 554px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,9 +111,7 @@ label{
 .para{
     height:80px;
 }
-textarea::placeholder {
-    font: normal normal normal 12px/15px Roboto;
-}
+
 .row-content{
    
     display: flex;
