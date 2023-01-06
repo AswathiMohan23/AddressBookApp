@@ -68,3 +68,30 @@ body{
     min-width: 200px;
     padding: 0 9%;
 }
+td,th{
+    text-align: left;
+    padding: 15px 8px;
+    opacity: 1;
+    letter-spacing: 0px;
+}
+tr{
+    background-color: white;
+}
+th{
+    font: normal normal bold 18px/22px Lato;
+    background: #F7F7F7 0% 0% no-repeat padding-box;
+    border-radius: 3px 3px 0px 0px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #658292;
+    text-transform: capitalize;
+    border: 0px solid #dddddd;
+    padding-left: 40px;
+    padding-bottom: 0;
+}
+td{
+    padding: 15px 40px;
+    color: #3D3D3D;
+    font: normal normal 600 14px/16px Lato;
+    cursor: pointer;
+}
