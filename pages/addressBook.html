@@ -22,7 +22,7 @@
 
             <form class="form" action="#" onsubmit="save();return false"> <!-- used to save the event -->
                 <div class="form-head">Person Address form</div>
-                <div class="row-content">
+                <div class="column-content">
                    <label class="label text" for="name">Full Name</label><br>
                    <input class="input" type="text" id="name" name="name" placeholder="name..."required><br>
                    <label class="label text" for="phoneNo">Phone Number</label><br>
@@ -30,7 +30,9 @@
                    <label class="label text" for="address">Address</label><br>
                    <input class="input" type="text" id="address" ><br>
                 </div>
+                <div class="column-content">
                 <div class="row-content">
+                    <div class="column-in_line">
                     <label class="label text" for="City">City</label>
                     <select id="city" name="City">
                         
@@ -48,8 +50,8 @@
                             <option value="12">Thrissur</option>
                             <option value="13">Kottayam</option>
                         </select>
-
-                                        <div class="row-content">
+                        </div>
+                <div class="column-in_line">
                     <label class="label text" for="state">State</label>
                     <select id="state" name="State">
                             
@@ -60,7 +62,7 @@
                             <option value="5">Maharashtra</option>
                         </select>
                         </div>
-                <div class="row-content">
+                <div class="column-in_line">
                     <label class="label text" for="state">State</label>
                     <select id="state" name="State">
                             
@@ -71,7 +73,7 @@
                             <option value="5">Maharashtra</option>
                         </select>
                         </div>
-                <div class="row-content">
+                <div class="column-in_line">
                     <label class="label text" for="zip">Zip Code</label>
                     <select id="zip" name="Zip Code">
                             <option value="1">692304</option>
@@ -79,8 +81,17 @@
                             <option value="3">503800</option>
                             <option value="4">409192</option>
                             <option value="5">796023</option>
-                        </select>   
+                        </select><br>
                     </div>
+                    </div>
+                    </div>
+
+                <div class="buttonParent">
+                    <div class="add-reset" style="align-self: center;">
+                        <button type="add" class="button addButton" id="addButton">Add</button>
+                        <button type="reset" class="resetButton button" id="resetButton" onclick="resetForm();">Reset</button>
+                    </div>    
+                </div>    
         </form>            
 
     </body>

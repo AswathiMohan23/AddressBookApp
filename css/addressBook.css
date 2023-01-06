@@ -36,6 +36,12 @@ body{
     align-items: flex-start;
     margin-left: 50px;
 }
+.column-in_line{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
 .label{
     min-width: 50px;
 }
@@ -43,14 +49,7 @@ label{
     padding: 20px 10px 8px 0;
     display: inline-block;
 }
-.text{
-    
-    text-align: left;
-    font: normal normal normal 18px/24px Roboto;
-    font-size: 15px;
-    color:#42515F;
-    opacity: 1;
-}
+
 .form-head{
     background: #008CFF 0% 0% no-repeat padding-box;
     padding: 30px 0px 30px 60px;
@@ -72,6 +71,14 @@ label{
     border-radius: 3px;
     opacity: 1;
 }
+.text{
+    
+    text-align: left;
+    font: normal normal normal 18px/24px Roboto;
+    font-size: 15px;
+    color:#42515F;
+    opacity: 1;
+}
 .form-content{
     display: flex;
     justify-content: center;
@@ -80,10 +87,108 @@ label{
     margin-bottom: 100px;
 }
 .form{
-    width:1067px;
+    top: 173px;
+    left: 427px;
+    width: 1067px;
+    height: 803px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border: 1px solid #F5F5F5;
     border-radius: 8px;
     opacity: 1;
 }
+.para{
+    height:80px;
+}
+textarea::placeholder {
+    font: normal normal normal 12px/15px Roboto;
+}
+.row-content{
+   
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    align-items: flex-start;
+}
+
+select{
+    padding: 10px;
+    border: 1px solid #BDBDBD;
+    border-radius: 3px;
+    resize: vertical;
+    font: normal normal normal 12px Roboto;
+    letter-spacing: 0px;
+    color: #e02525;
+    background-color: transparent;
+    width: 100%;
+}
+
+.buttonParent{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.submitButton{
+    border: none;
+    background: #f5f5f5;
+    margin-right: 30px;
+}
+#submitButton:hover, #resetButton:hover, #cancelButton:hover{
+    background-color: rgb(72, 194, 55);
+    color: white;
+}
+#submitButton:active, #resetButton:active, #cancelButton:active{
+    background-color: rgb(69, 55, 194);
+    color: rgb(0, 0, 0);
+}
+.button{
+    font-size: 15px;
+    font-family: Roboto;
+    letter-spacing: 0px;
+    color: #42515f;
+    opacity: 1;
+    font-weight: 400;
+    min-width: 80px;
+    padding: 7px 7px;
+    border: 1px solid #707070;
+    cursor: pointer;
+    background: #E2E2E2 0% 0% no-repeat padding-box;
+    border: 1px solid #969696;
+    border-radius: 5px;
+}
+error-output{
+    margin-left: 60%;
+    font-size: 15px;
+    font-style: bold;
+    color: red;
+}
+
+@media only screen and (max-width: 900px){
+    .column{
+        flex-direction: row;
+    }
+    .submit-reset{
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .submitButton{
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    .buttonParent{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+    .row-content{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    select {
+        width: 150px;
+    }
+}
+
