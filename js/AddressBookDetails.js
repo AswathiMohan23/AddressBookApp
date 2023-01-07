@@ -52,4 +52,4 @@ function addressValidation(address){
     return true;
 }
 
-let contact=new AddresBookDetails();
+let addresBookDetails=new AddresBookDetails();

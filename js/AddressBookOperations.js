@@ -64,3 +64,21 @@ function savingTheDetails(){
     }
     updateToLocalStorage();
 }
+
+const remove=(node) =>{
+    let addressBookData=addressBookList.find(i=>i._id== node.id);
+    if(!addressBookData){
+        console.log("No entry");
+         return;
+    }
+    
+    const index=addressBookList
+        .map(i=>i._id)
+        .indexOf(addressBookData._id);
+        addressBookList.splice(index,1);
+    localStorage.setItem("AddressBookList",JSON.stringify(addressBookList));
+    createInnerHtml();
+    
+}
+
+
