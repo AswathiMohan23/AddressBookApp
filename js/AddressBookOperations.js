@@ -93,5 +93,14 @@ function saveToLocalStorage(){
         localStorage.setItem("ID",contactID);
         return contactID;
     }
+   
+    function checkForUpdates(){
+        const jsonContact = localStorage.getItem('editContact');
+        isUpdate = jsonContact?true:false;
+        if(!isUpdate) return;
+        data = JSON.parse(jsonContact);
+        console.log(data)
+        setForm();
+    }
     
 
