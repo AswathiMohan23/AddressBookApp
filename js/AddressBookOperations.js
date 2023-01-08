@@ -103,4 +103,13 @@ function saveToLocalStorage(){
         setForm();
     }
     
+function setForm(){
+    setValue('#name',data._name);
+    setValue('#phone',data._phone);
+    setValue('#address',data._address);
+    setValue('#city',data._city);
+    setValue('#state',data._state);
+    setValue('#zip',data._zip);
+}
+    
 
