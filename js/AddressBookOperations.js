@@ -1,4 +1,4 @@
-let newPerson=new Array();
+let data=new Array();
 let isUpdate=false;
 
 window.addEventListener('DOMContentLoaded',(event)=>{
@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded',(event)=>{
             return;
         }
         try {
-            (new AddresBookDetails()).name = name.value;
+            (new addresBookDetails()).name = name.value;
             nameError.textContent = "";
         } catch (exception) {
             nameError.textContent = exception;
@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded',(event)=>{
             return;
         }
         try {
-            (new AddresBookDetails()).phoneNumber = phoneNumber.value;
+            (new addresBookDetails()).phoneNumber = phoneNumber.value;
             phoneNumberError.textContent = "";
         } catch (exception) {
             phoneNumberError.textContent = exception;
@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded',(event)=>{
             return;
         }
         try {
-            (new AddresBookDetails()).address = address.value;
+            (new addresBookDetails()).address = address.value;
             addressError.textContent = "";
         } catch (exception) {
             addressError.textContent = exception;
@@ -64,21 +64,4 @@ function savingTheDetails(){
     }
     updateToLocalStorage();
 }
-
-const remove=(node) =>{
-    let addressBookData=addressBookList.find(i=>i._id== node.id);
-    if(!addressBookData){
-        console.log("No entry");
-         return;
-    }
-    
-    const index=addressBookList
-        .map(i=>i._id)
-        .indexOf(addressBookData._id);
-        addressBookList.splice(index,1);
-    localStorage.setItem("AddressBookList",JSON.stringify(addressBookList));
-    createInnerHtml();
-    
-}
-
 
