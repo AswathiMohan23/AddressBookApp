@@ -65,3 +65,25 @@ function savingTheDetails(){
     updateToLocalStorage();
 }
 
+function saveToLocalStorage(){
+    let contact=JSON.parse(localStorage.getItem("Data"));
+    if(contact){
+        let dataToBeUpdated=contact.find(i=>i.id==data._id);
+        if(!dataToBeUpdated){
+            data._id=getID();
+            MediaRecorder.push(data);
+        }else{
+            const index=record.map(i=>i._id)
+                        .indexOf(dataToBeUpdated._id);
+            data._id=getID();
+            contact.splice(index,1,data);
+        }
+    }else{
+        data._id=getID();
+        contact=[data];
+    }
+    console.log(data);
+    localStorage.setItem("data",JSON.stringify(data));
+    window.location.replace(site_properties.home_page);
+    }
+
