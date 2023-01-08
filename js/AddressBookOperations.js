@@ -87,3 +87,11 @@ function saveToLocalStorage(){
     window.location.replace(site_properties.home_page);
     }
 
+    function getID(){
+        let contactID = localStorage.getItem("ID");
+        contactID = !contactID?1:(parseInt(contactID)+1).toString();
+        localStorage.setItem("ID",contactID);
+        return contactID;
+    }
+    
+
