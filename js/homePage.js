@@ -1,3 +1,6 @@
+let data=new Array();
+let isUpdate=false;
+
 function remove(node) {
     let addressBookData=data.find(i=>i._id== node.id);
     if(!addressBookData){
