@@ -111,5 +111,10 @@ function setForm(){
     setValue('#state',data._state);
     setValue('#zip',data._zip);
 }
-    
+
+
+function setValue(propertyValue,value){
+    const items = document.querySelector(propertyValue);
+    element.value = value;
+}
 
